@@ -25,13 +25,17 @@ cd website && python3 -m http.server 8000
 The editable source lives here (inside the project). The deployed git repo lives outside
 OneDrive to avoid sync conflicts.
 
+## Live site
+
+https://schlenk36.github.io/  (repo: `Schlenk36/Schlenk36.github.io`)
+
 ## Redeploy after edits
 
-Replace `USERNAME` with your GitHub username:
+Edit the files in this `website/` folder, then run:
 
 ```bash
-rsync -a --delete --exclude='.git' "<this website folder>/" ~/Sites/USERNAME.github.io/
-cd ~/Sites/USERNAME.github.io && git add -A && git commit -m "Update site" && git push
+rsync -a --delete --exclude='.git' "/Users/yuhangzhang/Library/CloudStorage/OneDrive-Personal/UHResearch/Texsyn_CV/website/" ~/Sites/Schlenk36.github.io/
+cd ~/Sites/Schlenk36.github.io && git add -A && git commit -m "Update site" && git push
 ```
 
-GitHub Pages will rebuild within a minute.
+GitHub Pages rebuilds within a minute.
