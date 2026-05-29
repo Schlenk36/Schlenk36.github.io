@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yuhang Zhang — Synthetic &amp; Organometallic Chemist</title>
+<meta name="description" content="Yuhang Zhang — PhD candidate in synthetic organic and organometallic chemistry (University of Houston). Asymmetric catalysis, complex molecule synthesis, medicinal chemistry. Open to U.S. pharma and biotech roles." />
+<meta name="author" content="Yuhang Zhang" />
+<meta property="og:title" content="Yuhang Zhang — Synthetic &amp; Organometallic Chemist" />
+<meta property="og:description" content="PhD candidate in synthetic organic and organometallic chemistry. Asymmetric catalysis, complex molecule synthesis, medicinal chemistry. Open to U.S. pharma and biotech roles." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --accent: #1f3a68;
+    --accent-soft: #2d5394;
+    --gold: #d8a657;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-muted: #7a7a7a;
+    --rule: #d9dde4;
+    --bg: #f6f4ee;
+    --paper: #ffffff;
+    --paper-2: #fbfaf6;
+    --shadow: 0 12px 40px rgba(20, 30, 60, 0.10), 0 2px 8px rgba(20, 30, 60, 0.05);
+    --radius: 10px;
+    --maxw: 1080px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  h1, h2, h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 500; line-height: 1.15; letter-spacing: -0.3px; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Nav ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(246, 244, 238, 0.88);
+    backdrop-filter: saturate(150%) blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-family: 'Newsreader', Georgia, serif; font-size: 20px; font-weight: 600; color: var(--ink); }
+  .brand .accent { color: var(--accent); font-style: italic; }
+  .nav-links { display: flex; align-items: center; gap: 26px; }
+  .nav-links a { color: var(--ink-soft); font-size: 14.5px; font-weight: 500; }
+  .nav-links a:hover { color: var(--accent); text-decoration: none; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent); color: #fff; border: 1px solid var(--accent);
+    padding: 9px 16px; border-radius: 999px; font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: background .15s ease, transform .15s ease;
+  }
+  .btn:hover { background: var(--accent-soft); text-decoration: none; transform: translateY(-1px); }
+  .btn.ghost { background: transparent; color: var(--accent); }
+  .btn.ghost:hover { background: rgba(31,58,104,0.07); }
+  .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 6px; }
+  .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 4px 0; transition: .2s; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 72px 0 56px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(31,58,104,0.08); color: var(--accent);
+    border: 1px solid rgba(31,58,104,0.2);
+    padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.2px; margin-bottom: 22px;
+  }
+  .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #2e9e5b; box-shadow: 0 0 0 3px rgba(46,158,91,0.18); }
+  .hero h1 { font-size: clamp(40px, 6vw, 64px); margin: 0 0 10px; color: var(--ink); }
+  .hero h1 .accent { color: var(--accent); font-style: italic; }
+  .hero .tagline { font-size: clamp(17px, 2.3vw, 21px); color: var(--ink-soft); font-weight: 400; max-width: 760px; }
+  .hero .roles { margin-top: 18px; font-size: 15.5px; color: var(--ink-soft); max-width: 720px; }
+  .hero .roles strong { color: var(--ink); font-weight: 600; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .hero-meta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; color: var(--ink-muted); }
+  .hero-meta a { color: var(--ink-soft); }
+
+  /* ---------- Sections ---------- */
+  section { padding: 56px 0; border-top: 1px solid var(--rule); }
+  .sec-label { font-size: 12px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: var(--accent); margin: 0 0 6px; }
+  .sec-title { font-size: clamp(26px, 3.4vw, 34px); margin: 0 0 28px; color: var(--ink); }
+  .lead-text { font-size: 17px; color: var(--ink-soft); max-width: 820px; }
+  .lead-text strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Research cards ---------- */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card {
+    background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius);
+    padding: 26px 24px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(20,30,60,0.14); }
+  .card .tag { font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .card.lead .tag { color: var(--accent); }
+  .card h3 { font-size: 21px; margin: 0 0 10px; color: var(--ink); }
+  .card p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+  .card .pin { margin-top: 14px; font-size: 12.5px; color: var(--ink-muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { position: relative; margin-left: 6px; }
+  .t-item { position: relative; padding: 0 0 26px 30px; border-left: 2px solid var(--rule); }
+  .t-item:last-child { border-left-color: transparent; padding-bottom: 0; }
+  .t-item::before { content: ""; position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
+  .t-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+  .t-title { font-weight: 600; font-size: 16px; color: var(--ink); font-family: 'Inter', sans-serif; }
+  .t-date { font-size: 13px; color: var(--ink-muted); white-space: nowrap; }
+  .t-sub { font-size: 14px; color: var(--accent); margin-bottom: 6px; }
+  .t-item ul { margin: 6px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: 14.5px; }
+  .t-item li { margin-bottom: 4px; }
+
+  /* ---------- Skills ---------- */
+  .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .skill-box { background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--radius); padding: 20px 22px; }
+  .skill-box h3 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+  .skill-box p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill { background: rgba(31,58,104,0.07); border: 1px solid rgba(31,58,104,0.15); color: var(--accent); border-radius: 999px; padding: 5px 12px; font-size: 13px; font-weight: 500; }
+
+  /* ---------- Certifications ---------- */
+  .cert-flex { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: center; }
+  .cert-list { list-style: none; margin: 0; padding: 0; }
+  .cert-list li { padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 15px; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+  .cert-list li:last-child { border-bottom: 0; }
+  .cert-list .check { color: var(--gold); font-weight: 700; }
+  .cert-issuer { font-size: 13.5px; color: var(--ink-muted); margin-bottom: 8px; }
+  .cert-img { width: 100%; border-radius: var(--radius); }
+
+  /* ---------- Publications ---------- */
+  .pub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .pub-box { background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); padding: 22px 24px; box-shadow: var(--shadow); }
+  .pub-box h3 { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+  .pub-box ul { margin: 0; padding-left: 18px; color: var(--ink-soft); font-size: 14.5px; }
+  .pub-box li { margin-bottom: 8px; }
+  .pub-box li em { color: var(--ink-muted); }
+
+  /* ---------- Documents ---------- */
+  .docs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .doc-card {
+    background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius);
+    padding: 24px; box-shadow: var(--shadow); text-align: center;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .doc-card:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(20,30,60,0.14); }
+  .doc-icon { width: 42px; height: 42px; margin: 0 auto 14px; color: var(--accent); }
+  .doc-card h3 { font-size: 18px; margin: 0 0 4px; color: var(--ink); }
+  .doc-card p { font-size: 13px; color: var(--ink-muted); margin: 0 0 16px; }
+
+  /* ---------- Contact ---------- */
+  .contact { background: var(--accent); color: #fff; border-radius: 0; }
+  .contact .sec-label { color: rgba(255,255,255,0.7); }
+  .contact .sec-title { color: #fff; }
+  .contact p { color: rgba(255,255,255,0.85); font-size: 17px; max-width: 660px; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
+  .contact-links a {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.28);
+    padding: 11px 18px; border-radius: 999px; font-size: 14.5px; font-weight: 500;
+    transition: background .15s ease;
+  }
+  .contact-links a:hover { background: rgba(255,255,255,0.22); text-decoration: none; }
+
+  footer { background: #16294a; color: rgba(255,255,255,0.6); font-size: 13px; padding: 26px 0; text-align: center; }
+  footer a { color: rgba(255,255,255,0.8); }
+
+  .icon { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px) {
+    .cards, .docs-grid { grid-template-columns: 1fr; }
+    .skills-grid, .pub-grid, .cert-flex { grid-template-columns: 1fr; }
+    .cert-flex .cert-img { max-width: 460px; }
+    .nav-links {
+      position: absolute; top: 64px; left: 0; right: 0;
+      flex-direction: column; align-items: flex-start; gap: 0;
+      background: var(--bg); border-bottom: 1px solid var(--rule);
+      padding: 8px 24px 18px; display: none;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 11px 0; width: 100%; border-bottom: 1px solid var(--rule); }
+    .nav-links .btn { margin-top: 12px; }
+    .nav-toggle { display: block; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Yuhang <span class="accent">Zhang</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#documents">Documents</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="docs/Yuhang Zhang_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" style="border-top:0;">
+      <div class="wrap">
+        <span class="badge"><span class="dot"></span> Open to opportunities — U.S. pharma &amp; biotech</span>
+        <h1>Yuhang <span class="accent">Zhang</span></h1>
+        <p class="tagline">PhD candidate in synthetic organic &amp; organometallic chemistry — asymmetric catalysis, complex molecule synthesis, and medicinal chemistry.</p>
+        <p class="roles">Targeting <strong>medicinal chemistry</strong>, <strong>synthesis chemist / R&amp;D</strong>, and <strong>process development</strong> roles. Graduating 2027.</p>
+        <div class="hero-cta">
+          <a class="btn" href="docs/Yuhang Zhang_CV.pdf" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+          <a class="btn ghost" href="mailto:yuhangzhang36@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            Email me
+          </a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/yuhang-zhang-21366a210" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="hero-meta">
+          <span>Houston, TX</span>
+          <a href="mailto:yuhangzhang36@gmail.com">yuhangzhang36@gmail.com</a>
+          <a href="tel:+19793279652">+1 (979) 327-9652</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about">
+      <div class="wrap">
+        <p class="sec-label">About</p>
+        <h2 class="sec-title">Synthetic chemist with an engineer's eye for scale</h2>
+        <p class="lead-text">
+          I am a Ph.D. candidate in chemistry at the University of Houston (expected 2027), working in the May group on
+          <strong>complex molecule synthesis</strong> and <strong>asymmetric catalysis</strong>. My work spans multi-step
+          total synthesis, organometallic catalyst construction, and medicinal-chemistry side-projects, supported by
+          air-/moisture-free Schlenk technique and full-spectrum analytical characterization. A B.S. in Chemical
+          Engineering gives me a process-and-scale-up perspective on synthetic chemistry, and I am eager to apply this
+          skill set to drug discovery and method-development teams in industry.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH ============ -->
+    <section id="research">
+      <div class="wrap">
+        <p class="sec-label">Research</p>
+        <h2 class="sec-title">What I work on</h2>
+        <div class="cards">
+          <div class="card lead">
+            <span class="tag">Lead project</span>
+            <h3>Chiral Dirhodium(II) Catalyst</h3>
+            <p>
+              Lead contributor on a 2nd-generation chiral bidentate Rh<sub>2</sub>(II) biscarboxylate catalyst
+              (initial design by Dr. H. Barzegar) with &alpha;-quaternary stereocenters and an m-xylene tether bridging
+              both Rh centers at ~90&deg; bite angle for enantioselective carbene cascade reactions. Completed the
+              7-step ligand synthesis; currently assembling the metal complex.
+            </p>
+            <span class="pin">Poster · TexSyn 2026</span>
+          </div>
+          <div class="card">
+            <span class="tag">Medicinal chemistry</span>
+            <h3>Warfarin &amp; Flavone Scaffolds</h3>
+            <p>
+              Synthesized warfarin derivatives via R-TN1-organocatalyzed conjugate addition (ORP), demonstrating
+              enantioselective organocatalysis on a medicinally relevant scaffold; produced a gram-scale flavone
+              scaffold (~1.4 g &times; 4 batches) with an arylboronic-acid-driven analog series planned for
+              biological-activity studies.
+            </p>
+            <span class="pin">Drug-discovery-relevant synthesis</span>
+          </div>
+          <div class="card">
+            <span class="tag">Polymer chemistry</span>
+            <h3>Fluorinated AEM Candidates</h3>
+            <p>
+              Synthesized fluorinated poly(arylene piperidinium) hydroxide candidates aimed at anion-exchange-membrane
+              applications for water electrolysis; investigated structure&ndash;viscosity relationships and characterized
+              structure and end-group identity by NMR and MALDI-TOF.
+            </p>
+            <span class="pin">Poster · TexSyn 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience">
+      <div class="wrap">
+        <p class="sec-label">Experience</p>
+        <h2 class="sec-title">Research &amp; teaching timeline</h2>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-head"><span class="t-title">Doctoral Researcher — May Group, University of Houston</span><span class="t-date">01/2023 – Present</span></div>
+            <div class="t-sub">Department of Chemistry · Advisor: Prof. Jeremy A. May</div>
+            <ul>
+              <li>Lead contributor on the dirhodium(II) catalyst program: 7-step ligand total synthesis, key intermediates carried at hundreds-of-milligrams to gram scale, metal-complex assembly underway.</li>
+              <li>Scaled a PdCl<sub>2</sub>/PMHS ketone reduction from 100 mg to 750 mg at ~100% isolated yield by tuning reagent dispersion and a 23–40 °C thermal profile across &gt;10 condition screens.</li>
+              <li>Medicinal-chemistry side-projects: warfarin derivatives (R-TN1 organocatalysis) and gram-scale flavone scaffolds.</li>
+            </ul>
+          </div>
+          <div class="t-item">
+            <div class="t-head"><span class="t-title">Doctoral Researcher (joint) — Texas Center for Superconductivity</span><span class="t-date">01/2024 – 09/2024</span></div>
+            <div class="t-sub">University of Houston · Advisors: Prof. Jeremy A. May &amp; Prof. Zhifeng Ren</div>
+            <ul>
+              <li>Synthesized and characterized fluorinated poly(arylene piperidinium) hydroxide AEM candidates; investigated structure–viscosity relationships by NMR and MALDI-TOF.</li>
+            </ul>
+          </div>
+          <div class="t-item">
+            <div class="t-head"><span class="t-title">Project Lead — Chemical Integral Process Design</span><span class="t-date">10/2021 – 02/2022</span></div>
+            <div class="t-sub">Technion (China campus), Shantou</div>
+            <ul>
+              <li>Led a team to optimize a large-scale methanol process; built the full PFD and mass/energy balance in UniSim for a profitable plant design; authored and presented the technical report.</li>
+            </ul>
+          </div>
+          <div class="t-item">
+            <div class="t-head"><span class="t-title">Polymer Lab Student Assistant</span><span class="t-date">08/2021 – 01/2022</span></div>
+            <div class="t-sub">Technion (China campus), Shantou</div>
+            <ul>
+              <li>Extruded polyethylene formulations; quantified thermal stability by DSC and TGA; ran tensile testing across polymer specimens.</li>
+            </ul>
+          </div>
+          <div class="t-item">
+            <div class="t-head"><span class="t-title">Undergraduate Research Assistant</span><span class="t-date">08/2019 – 06/2021</span></div>
+            <div class="t-sub">Technion (China campus), Shantou</div>
+            <ul>
+              <li>Synthesized the ligand of a photo-controlled organometallic catalyst for olefin block-copolymer polymerization; tracked reactions by MALDI-TOF, TLC, and NMR.</li>
+            </ul>
+          </div>
+          <div class="t-item">
+            <div class="t-head"><span class="t-title">Teaching Assistant — Organic Chemistry Lab I</span><span class="t-date">09/2022 – Present</span></div>
+            <div class="t-sub">University of Houston</div>
+            <ul>
+              <li>Instruct undergraduate lab sections (distillation, recrystallization, extraction, TLC, NMR interpretation); 6+ consecutive semesters.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills">
+      <div class="wrap">
+        <p class="sec-label">Skills</p>
+        <h2 class="sec-title">Technical toolkit</h2>
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h3>Synthesis</h3>
+            <p>Multi-step total synthesis · asymmetric catalyst synthesis &amp; optimization (Rh<sub>2</sub>(II) carboxylate) · organometallic complex assembly · organocatalysis (R-TN1) · medicinal chemistry · reaction-condition screening &amp; gram-scale scale-up · polymer synthesis &amp; characterization.</p>
+          </div>
+          <div class="skill-box">
+            <h3>Air- &amp; Moisture-Free</h3>
+            <p>Schlenk line · freeze-pump-thaw degassing · cannula transfer · solvent / amine distillation (DIPA / CaH<sub>2</sub>, THF) · low-temperature (−78 °C) Li-amide chemistry.</p>
+          </div>
+          <div class="skill-box">
+            <h3>Analytical</h3>
+            <div class="pills">
+              <span class="pill">NMR (1D &amp; 2D)</span><span class="pill">Chiral HPLC</span><span class="pill">GC-MS</span>
+              <span class="pill">MALDI-TOF</span><span class="pill">X-ray</span><span class="pill">IR</span>
+              <span class="pill">TGA</span><span class="pill">DSC</span>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h3>Computational, Data &amp; Engineering</h3>
+            <p>ChemDraw · Python · Pandas · Jupyter · MATLAB · UniSim plant design · integral process design · mass / energy balance (B.S. Chemical Engineering background).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section id="certifications">
+      <div class="wrap">
+        <p class="sec-label">Certifications</p>
+        <h2 class="sec-title">Machine learning &amp; data science</h2>
+        <div class="cert-flex">
+          <div>
+            <p class="cert-issuer">Hewlett Packard Enterprise Data Science Institute · University of Houston</p>
+            <ul class="cert-list">
+              <li><span class="check">✓</span> Selected Topics in AI</li>
+              <li><span class="check">✓</span> Introduction to Deep Learning</li>
+              <li><span class="check">✓</span> Introduction to Machine Learning</li>
+              <li><span class="check">✓</span> Principles of Data Management</li>
+            </ul>
+          </div>
+          <img class="cert-img" src="assets/certifications.png" alt="Four HPE Data Science Institute certification badges from the University of Houston: Intro to Machine Learning, Principles of Data Management, Intro to Deep Learning, and Selected Topics in AI." />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PUBLICATIONS ============ -->
+    <section id="publications">
+      <div class="wrap">
+        <p class="sec-label">Publications &amp; Presentations</p>
+        <h2 class="sec-title">Selected output</h2>
+        <div class="pub-grid">
+          <div class="pub-box">
+            <h3>Presentations &amp; Posters</h3>
+            <ul>
+              <li>Poster, TexSyn 2026 — “Design and Synthesis of a Novel Chiral Bidentate Dirhodium(II) Catalyst for Enantioselective Carbene Cascade Reactions.” <em>Y. Zhang, H. Barzegar, J. A. May.</em></li>
+              <li>Poster, TexSyn 2024 — anion exchange membrane synthesis &amp; warfarin-derivative organocatalysis. <em>Y. Zhang, C. Yuan, Z. Ren, J. A. May.</em></li>
+            </ul>
+          </div>
+          <div class="pub-box">
+            <h3>Acknowledged Contributions (Reviews, 2020)</h3>
+            <ul>
+              <li>Light-mediated olefin coordination polymerization and photoswitches.</li>
+              <li>Catalytic dearomative hydroboration of N-heteroarenes.</li>
+              <li>Transition-metal-free hydroelementation (E = B, Si, Ge, Sn) of alkynes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOCUMENTS ============ -->
+    <section id="documents">
+      <div class="wrap">
+        <p class="sec-label">Documents</p>
+        <h2 class="sec-title">Download my application materials</h2>
+        <div class="docs-grid">
+          <div class="doc-card">
+            <svg class="doc-icon icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <h3>Curriculum Vitae</h3>
+            <p>2 pages · PDF</p>
+            <a class="btn" href="docs/Yuhang Zhang_CV.pdf" target="_blank" rel="noopener">Open CV</a>
+          </div>
+          <div class="doc-card">
+            <svg class="doc-icon icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+            <h3>Research Summary</h3>
+            <p>2 pages · PDF</p>
+            <a class="btn" href="docs/Yuhang Zhang_Research Summary.pdf" target="_blank" rel="noopener">Open summary</a>
+          </div>
+          <div class="doc-card">
+            <svg class="doc-icon icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 7 8 5 8-5"/></svg>
+            <h3>Cover Letter</h3>
+            <p>1 page · PDF</p>
+            <a class="btn" href="docs/Yuhang Zhang_Cover Letter.pdf" target="_blank" rel="noopener">Open letter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <p class="sec-label">Contact</p>
+        <h2 class="sec-title">Let's talk</h2>
+        <p>I am actively seeking medicinal chemistry, synthesis chemist / R&amp;D, and process development roles at U.S. pharma and biotech organizations. If my background fits a role on your team, I'd welcome a conversation.</p>
+        <div class="contact-links">
+          <a href="mailto:yuhangzhang36@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            yuhangzhang36@gmail.com
+          </a>
+          <a href="tel:+19793279652">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +1 (979) 327-9652
+          </a>
+          <a href="https://www.linkedin.com/in/yuhang-zhang-21366a210" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="docs/Yuhang Zhang_CV.pdf" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      &copy; <span id="year"></span> Yuhang Zhang · Houston, TX ·
+      <a href="mailto:yuhangzhang36@gmail.com">yuhangzhang36@gmail.com</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); });
+    });
+  </script>
+</body>
+</html>
